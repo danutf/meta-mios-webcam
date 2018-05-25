@@ -16,6 +16,6 @@ FILES_${PN} += "${bindir}"
 do_install (){
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/miosgrab ${D}${bindir}
-	install -m 0755 ${WORKDIR}/git/scripts/purge.sh ${D}${bindir}
-	install -m 0755 ${WORKDIR}/git/scripts/img_cleanup.sh ${D}${bindir}
+	install -m 0755 ${S}/scripts/purge.sh ${D}${bindir}
+	install -m 0755 ${S}/scripts/img_cleanup.sh ${D}${bindir}
 }
