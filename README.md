@@ -2,7 +2,7 @@
 Please check 'other' directory to review:
 - build/conf/bblayer.conf
   Add new BBLAYERS:
-> 	 /home/danutf/poky/meta-openembedded/meta-oe \
+> 	/home/danutf/poky/meta-openembedded/meta-oe \
 >  	/home/danutf/poky/meta-mios-webcam \
  
 - build/conf/local.conf
