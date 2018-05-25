@@ -4,13 +4,16 @@ Please check 'other' directory to review:
 
   Add new BBLAYERS:
 > 	/home/danutf/poky/meta-openembedded/meta-oe \
+>
 >  	/home/danutf/poky/meta-mios-webcam \
  
 - build/conf/local.conf
 
   Changes:
 > 	MACHINE ??= "qemux86"
+>
 > 	IMAGE_INSTALL_append = " cronie helloworld v4l-utils miosgrab"
+>
 > 	CORE_IMAGE_EXTRA_INSTALL += "v4l2loopback-mod"
 
 
