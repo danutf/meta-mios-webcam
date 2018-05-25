@@ -634,18 +634,10 @@ index 3ee945fc9..000000000
 -
 -BBCLASSEXTEND = "native nativesdk"
 diff --git a/meta-oe/recipes-multimedia/v4l2apps/v4l-utils_1.12.3.bb b/meta-oe/recipes-multimedia/v4l2apps/v4l-utils_1.12.3.bb
-index 57cfb1318..23ea28030 100644
+index 57cfb1318..3661e0470 100644
 --- a/meta-oe/recipes-multimedia/v4l2apps/v4l-utils_1.12.3.bb
 +++ b/meta-oe/recipes-multimedia/v4l2apps/v4l-utils_1.12.3.bb
-@@ -23,6 +23,7 @@ SRC_URI = "http://linuxtv.org/downloads/v4l-utils/v4l-utils-${PV}.tar.bz2 \
-            file://0001-ir-ctl-Define-TEMP_FAILURE_RETRY-if-undefined.patch \
-            file://0002-contrib-test-Link-mc_nextgen_test-with-libargp-if-ne.patch \
-            file://0003-v4l2-ctl-Do-not-use-getsubopt.patch \
-+#          file://v4lgrab.patch \
-            "
- SRC_URI[md5sum] = "89e1ed6c69c94e0489dc0a638c7841aa"
- SRC_URI[sha256sum] = "5a47dd6f0e7dfe902d94605c01d385a4a4e87583ff5856d6f181900ea81cf46e"
-@@ -37,6 +38,9 @@ FILES_media-ctl = "${bindir}/media-ctl ${libdir}/libmediactl.so.*"
+@@ -37,6 +37,9 @@ FILES_media-ctl = "${bindir}/media-ctl ${libdir}/libmediactl.so.*"
  
  FILES_ir-keytable = "${bindir}/ir-keytable ${base_libdir}/udev/rules.d/*-infrared.rules"
  RDEPENDS_ir-keytable += "${VIRTUAL-RUNTIME_ir-keytable-keymaps}"
@@ -655,7 +647,7 @@ index 57cfb1318..23ea28030 100644
  
  FILES_rc-keymaps = "${sysconfdir}/rc* ${base_libdir}/udev/rc*"
  
-@@ -53,3 +57,9 @@ FILES_libv4l-dev += "${includedir} ${libdir}/pkgconfig \
+@@ -53,3 +56,9 @@ FILES_libv4l-dev += "${includedir} ${libdir}/pkgconfig \
  
  PARALLEL_MAKE_class-native = ""
  BBCLASSEXTEND = "native"
